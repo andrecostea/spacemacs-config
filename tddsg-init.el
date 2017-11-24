@@ -896,7 +896,7 @@ If OTHER is t then scroll other window."
   (global-hl-todo-mode 1)           ;; highlight todo mode
   (blink-cursor-mode 0)             ;; turn off blinking
   (setq blink-cursor-blinks 15)     ;; blink 15 times
-  (setq fill-column 75)             ;; max size of a line for fill-or-unfill
+  ;; (setq fill-column 75)             ;; max size of a line for fill-or-unfill
   (setq fast-but-imprecise-scrolling nil)
   (setq text-scale-mode-step 1.1)   ;; scale changing font size
   (setq frame-title-format          ;; frame title
@@ -1206,7 +1206,7 @@ If OTHER is t then scroll other window."
       (add-to-list 'tddsg--face-change-types face))
     (tddsg--highlight-todos)
     (smartparens-global-mode 1)
-    (column-marker-3 80)
+    ;; (column-marker-3 80)
     (whitespace-mode 1)
     (flyspell-mode 1))
   (defun hook-prog-mode ()
@@ -1214,7 +1214,7 @@ If OTHER is t then scroll other window."
     (setq tddsg--face-change-types tddsg--face-change-types-default)
     (when (derived-mode-p 'c-mode 'c++-mode) (ggtags-mode 1))
     (smartparens-global-mode 1)
-    (column-marker-3 80)
+    ;; (column-marker-3 80)
     (whitespace-mode 1)
     (flyspell-mode -1)
     (linum-mode 1)
