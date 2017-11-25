@@ -892,6 +892,7 @@ If OTHER is t then scroll other window."
 
 (defun tddsg/config-packages ()
   ;; visual interface setting
+  (menu-bar-mode 1)
   (display-time)                    ;; show time in mode line
   (global-hl-todo-mode 1)           ;; highlight todo mode
   (blink-cursor-mode 0)             ;; turn off blinking
@@ -1247,6 +1248,7 @@ If OTHER is t then scroll other window."
   (global-set-key (kbd "<home>") 'tddsg/beginning-of-line-dwim)
   (global-set-key (kbd "<escape>") 'keyboard-quit)
   (global-set-key (kbd "<f5>") 'tddsg/recompile)
+  (global-set-key (kbd "<delete>") 'delete-char)
 
   (global-set-key (kbd "C-<backspace>") 'backward-kill-word)
   (global-set-key (kbd "C-<delete>") 'kill-word)
@@ -1265,6 +1267,7 @@ If OTHER is t then scroll other window."
   (global-set-key (kbd "C-M-q") (kbd "C-u C-SPC"))   ;; traverse mark ring
   (global-set-key (kbd "C-S-q") 'tddsg/unpop-to-mark-command)
   (global-set-key (kbd "C-/") 'undo)
+  (global-set-key (kbd "<kp-subtract>") 'undo)
   (global-set-key (kbd "C-;") 'iedit-mode)
   (global-set-key (kbd "C-^") 'tddsg/join-with-beneath-line)
   (global-set-key (kbd "C-_") 'tddsg/join-to-above-line)
